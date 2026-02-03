@@ -1,4 +1,4 @@
-# Optimal Light Use Greenness
+# Optimal Light Use Strategy
 
 Seasonal vegetation dynamics and long-term greenness trends reconstructed with an optimal light use framework that links canopy structure, meteorology, and carbon uptake.
 
@@ -64,4 +64,4 @@ The script writes the following assets to `figure/`:
 Please open a discussion or issue in your collaboration space if you encounter missing data, plotting errors, or require additional diagnostics. Include MATLAB version details and any console warnings to accelerate troubleshooting.
 
 ## Citation
-Cite *Optimal light use strategy explains seasonal vegetation greenness dynamics and trends* (Zhu et al., 2025)
+Cite *Optimal canopy light-use strategy drives global greenness dynamics* (Zhu et al., 2026)
