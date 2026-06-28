@@ -1,6 +1,6 @@
 # Optimal canopy light-use strategy shapes global greenness dynamics
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.XXXXXXX-blue)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20998137-blue)](https://doi.org/10.5281/zenodo.20998137)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ![Figure 1](figure/Figure1_small.png)
@@ -8,6 +8,16 @@
 > **Fig. 1 |** Seasonality of the fraction of absorbed photosynthetically active radiation (fAPAR, dimensionless) and potential primary production (A₀, g C m⁻² month⁻¹). **(a)** fAPAR seasonality (dimensionless) derived from the MODIS product. The seasonality metric used here represents seasonal concentration, ranging from zero (uniform throughout the year) to unity (a complete leaf growth cycle within a single month). **(b)** A₀ seasonality (dimensionless) derived from the P model. **(c)** Latitudinal variations in the seasonality of fAPAR and A₀, with values representing area-weighted averages in 1° latitudinal bands.
 
 This repository accompanies the manuscript **"Optimal canopy light-use strategy shapes global greenness dynamics"** (Zhu et al., *Nature Communications*, 2026; manuscript **NCOMMS-25-24941B**) and provides the code, data, and figures needed to reproduce the main and supplementary results.
+
+---
+
+## Highlights
+
+- **A general synchronisation hypothesis** for vegetation greenness: fAPAR (fraction of absorbed photosynthetically active radiation) tracks the seasonal dynamics of potential production **A₀** across biomes — *plants tend to display foliage when it is most productive.*
+- **The PL model** (potential production × light-use strategy) extends the optimality-based P model with a leaf allocation fraction *η* and a phenological lag *τ* (2 weeks – 3 months, increasing with moisture) to predict the **monthly seasonal cycle of fAPAR** directly from climate forcing.
+- **Captures 81 %** of the observed monthly variation in MODIS fAPAR over 2001–2019, and substantially outperforms the 12-model **TRENDY-v9** DGVM ensemble (mean R² = 0.55 ± 0.2) in reproducing fAPAR seasonality (R² = 0.81, RMSE = 0.13).
+- **Mechanistic driver attribution** of the recent global greening trend: rising CO₂ dominates tropical greening, warming dominates high-latitude greening, and precipitation shifts dominate semi-arid greening / browning.
+- **Global GPP** increased by **11.7 ± 1.6 Pg C** over 2001–2019 (≈ 134.5 Pg C yr⁻¹ in 2019); a counterfactual experiment isolates that roughly two-thirds of the increase arises from leaf-level physiology and one-third from greening.
 
 ---
 
@@ -33,6 +43,7 @@ Ziqi Zhu (朱子琪)¹·², Han Wang (王焓)¹·*, Boya Zhou (周博雅)³, Wen
 
 ## Contents
 
+- [Highlights](#highlights)
 - [Authors](#authors)
 - [Abstract](#abstract)
 - [Repository Layout](#repository-layout)
@@ -126,7 +137,7 @@ The script writes the following assets to `figure/`:
 
 ## Reproducibility
 
-The tag `v1.0.0` of this repository corresponds exactly to the code version used to generate Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
+The tag `v1.0.1` of this repository corresponds to the version archived on Zenodo as **https://doi.org/10.5281/zenodo.XXXXXXX** and contains the code, packaged inputs, and figure-generation scripts used to produce Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
 
 ```matlab
 % In MATLAB, with the Mapping Toolbox installed
@@ -144,13 +155,10 @@ If you use this code in a publication, please cite both the manuscript and the v
 > Prentice, I. C. **Optimal canopy light-use strategy shapes global greenness
 > dynamics**. *Nature Communications* (2026).
 
-Software deposit (the exact version used to produce all results and figures in the manuscript above):
+Versioned software deposit (DOI to be assigned upon Zenodo processing of the v1.0.1 release):
 
-> Zhu, Z. et al. *Code for "Optimal canopy light-use strategy shapes global
-> greenness dynamics"*, `greenness`, **https://doi.org/10.5281/zenodo.XXXXXXX**
-> (2026).
-
-(The DOI `10.5281/zenodo.XXXXXXX` is a placeholder; it will be replaced with the actual identifier assigned by Zenodo when this release is published. The frozen DOI for this specific release is preserved permanently.)
+> Zhu, Z. et al. *Optimal canopy light-use strategy shapes global greenness
+> dynamics*, `greenness`, **https://doi.org/10.5281/zenodo.XXXXXXX** (2026).
 
 ## License
 
