@@ -137,7 +137,7 @@ The script writes the following assets to `figure/`:
 
 ## Reproducibility
 
-The tag `v1.0.1` of this repository corresponds to the version archived on Zenodo as **https://doi.org/10.5281/zenodo.XXXXXXX** and contains the code, packaged inputs, and figure-generation scripts used to produce Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
+The tag `v1.0.1` of this repository corresponds to the version archived on Zenodo as **https://doi.org/10.5281/zenodo.20998575** and contains the code, packaged inputs, and figure-generation scripts used to produce Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
 
 ```matlab
 % In MATLAB, with the Mapping Toolbox installed
@@ -155,10 +155,10 @@ If you use this code in a publication, please cite both the manuscript and the v
 > Prentice, I. C. **Optimal canopy light-use strategy shapes global greenness
 > dynamics**. *Nature Communications* (2026).
 
-Versioned software deposit (DOI to be assigned upon Zenodo processing of the v1.0.1 release):
+Versioned software deposit:
 
 > Zhu, Z. et al. *Optimal canopy light-use strategy shapes global greenness
-> dynamics*, `greenness`, **https://doi.org/10.5281/zenodo.XXXXXXX** (2026).
+> dynamics*, `greenness`, **https://doi.org/10.5281/zenodo.20998575** (2026).
 
 ## License
 
