@@ -1,0 +1,14 @@
+# MATLAB editor autosave / backups
+*.asv
+*.m~*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / IDE metadata
+.vscode/
+.idea/
+
+# Logs
+*.log

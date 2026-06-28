@@ -126,27 +126,31 @@ The script writes the following assets to `figure/`:
 
 ## Reproducibility
 
-The tag `v1.0.0` of this repository corresponds exactly to the code version used to generate Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. All inputs in `data/` are bundled with the repository; the workflow writes 600-dpi PNGs into `figure/`.
+The tag `v1.0.0` of this repository corresponds exactly to the code version used to generate Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
 
-```bash
-git clone -b v1.0.0 https://github.com/zhu-ziqi/greenness.git
+```matlab
+% In MATLAB, with the Mapping Toolbox installed
+cd code
+main_figures_ncomms   % runs the entire analysis end-to-end
 ```
 
-The P-model (`rpmodel`) source code used in this study is publicly available at <https://github.com/geco-bern/rpmodel> with its own Zenodo-archived DOI cited in the manuscript's Code Availability statement.
+All inputs in `data/` are bundled with the repository; the workflow writes 600-dpi PNGs into `figure/`.
 
 ## Citation
 
-If you use this code in a publication, please cite both the manuscript and the versioned software deposit.
+If you use this code in a publication, please cite both the manuscript and the versioned software deposit:
 
-**Manuscript:**
+> Zhu, Z., Wang, H., Zhou, B., Cai, W., Harrison, S. P., De Kauwe, M. G., &
+> Prentice, I. C. **Optimal canopy light-use strategy shapes global greenness
+> dynamics**. *Nature Communications* (2026).
 
-> Zhu, Z., Wang, H., Zhou, B., Cai, W., Harrison, S. P., De Kauwe, M. G., & Prentice, I. C. **Optimal canopy light-use strategy shapes global greenness dynamics**. *Nature Communications* (2026).
+Software deposit (the exact version used to produce all results and figures in the manuscript above):
 
-**Software deposit (the exact version used to produce all results and figures in the manuscript):**
+> Zhu, Z. et al. *Code for "Optimal canopy light-use strategy shapes global
+> greenness dynamics"*, `greenness`, **https://doi.org/10.5281/zenodo.XXXXXXX**
+> (2026).
 
-> Zhu, Z. et al. *Code for "Optimal canopy light-use strategy shapes global greenness dynamics"*, `greenness`, **https://doi.org/10.5281/zenodo.XXXXXXX** (2026).
-
-The DOI placeholder `10.5281/zenodo.XXXXXXX` will be replaced with the identifier assigned by Zenodo when this release is published. The frozen DOI for each release is preserved permanently on Zenodo.
+(The DOI `10.5281/zenodo.XXXXXXX` is a placeholder; it will be replaced with the actual identifier assigned by Zenodo when this release is published. The frozen DOI for this specific release is preserved permanently.)
 
 ## License
 
