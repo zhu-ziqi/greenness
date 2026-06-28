@@ -1,8 +1,8 @@
 {
-  "title": "Code for: Optimal canopy light-use strategy shapes global greenness dynamics (NCOMMS-25-24941B)",
+  "title": "Optimal canopy light-use strategy shapes global greenness dynamics",
   "upload_type": "software",
   "publication_date": "2026-06-28",
-  "description": "<p>This repository contains the MATLAB implementation of the PL model (potential production &times; light-use strategy), together with the analysis scripts, packaged gridded inputs and figure-generation code that reproduce all main and supplementary figures of the manuscript:</p><p>Zhu, Z., Wang, H., Zhou, B., Cai, W., Harrison, S. P., De Kauwe, M. G., &amp; Prentice, I. C. <em>Optimal canopy light-use strategy shapes global greenness dynamics</em>. Nature Communications (2026).</p><p>Contents:</p><ul><li><code>code/main_figures_ncomms.m</code> &mdash; master script that regenerates Figs. 1&ndash;6 and the supporting supplementary panels from the packaged inputs.</li><li><code>code/utility/</code> &mdash; plotting and statistical helpers (violin, scatter, lat-band, geoshow, etc.).</li><li><code>data/</code> &mdash; bundled GeoTIFF stacks (MODIS fAPAR, PL-model fAPAR, potential production A0, ROI mask, TRENDY-v9 ensemble summaries) and CSV/MAT metadata (FluxInformation.csv, gpp_global_pgc.mat, trendy_data_output*.mat).</li><li><code>figure/</code> &mdash; default export directory for the 600 dpi PNG outputs.</li></ul><p>The MATLAB Mapping Toolbox is required. The repository should be cited as:</p><p>Zhu, Z. et al. Code for &lsquo;Optimal canopy light-use strategy shapes global greenness dynamics&rsquo;, <em>greenness</em>, https://doi.org/10.5281/zenodo.XXXXXXX (2026).</p>",
+  "description": "<p><strong>Companion software for Zhu Z. et al., <em>Optimal canopy light-use strategy shapes global greenness dynamics</em>, <em>Nature Communications</em> (2026); manuscript NCOMMS-25-24941B.</strong></p><p>\"Greenness\" is a key indicator of the functional state of vegetation. Optimality principles suggest that plants invest in canopy architecture to maximize light capture, so greenness (fAPAR, fractional absorbed photosynthetically active radiation) should commonly track the seasonal dynamics of potential production (A<sub>0</sub>, the theoretical canopy carbon uptake with all light absorbed). In other words, plants tend to display foliage when it is most productive. We confirm this hypothesis using satellite observations and eddy-covariance flux measurements, and develop the <strong>PL model</strong> (potential production &times; light-use strategy), which predicts the seasonal dynamics of fAPAR directly from the climate-driven seasonal cycle of A<sub>0</sub>. The PL model contains two physically interpretable constraints &mdash; an inherent leaf biomass allocation fraction (&eta;) and a phenological lag (&tau;) representing the time for photosynthetic products to be allocated to foliage growth &mdash; and captures <strong>81%</strong> of the observed monthly variation in MODIS fAPAR over 2001&ndash;2019. It reproduces recent global greening trends attributed primarily to rising CO<sub>2</sub>, high-latitude warming, and shifts in precipitation, and outperforms 12 DGVMs from the TRENDY-v9 ensemble in capturing fAPAR seasonality.</p><p>This repository contains the MATLAB implementation of the PL model, together with the analysis scripts, packaged gridded inputs, and figure-generation code that reproduce all main and supplementary figures of the manuscript.</p><p><strong>Contents</strong></p><ul><li><code>code/main_figures_ncomms.m</code> &mdash; master script that regenerates Figs. 1&ndash;6 and the supporting supplementary panels from the packaged inputs.</li><li><code>code/utility/</code> &mdash; plotting and statistical helpers (violin, scatter, lat-band, geoshow, etc.).</li><li><code>data/</code> &mdash; bundled GeoTIFF stacks (MODIS fAPAR, PL-model fAPAR, potential production A<sub>0</sub>, ROI mask, TRENDY-v9 ensemble summaries) and CSV/MAT metadata (<code>FluxInformation.csv</code>, <code>gpp_global_pgc.mat</code>, <code>trendy_data_output*.mat</code>).</li><li><code>figure/</code> &mdash; default export directory for the 600 dpi PNG outputs.</li></ul><p><strong>Requirements</strong></p><ul><li>MATLAB R2020a (or later);</li><li>MATLAB Mapping Toolbox.</li></ul><p><strong>Repository</strong>: <a href=\"https://github.com/zhu-ziqi/greenness\">github.com/zhu-ziqi/greenness</a></p><p><strong>Cite as</strong>: Zhu, Z. et al. <em>Optimal canopy light-use strategy shapes global greenness dynamics</em>, Zenodo, https://doi.org/10.5281/zenodo.20998137 (2026).</p>",
   "creators": [
     {"name": "Zhu, Ziqi", "affiliation": "Department of Earth System Science, Tsinghua University, Beijing, China", "orcid": "0000-0003-0664-6032"},
     {"name": "Wang, Han", "affiliation": "Department of Earth System Science, Tsinghua University, Beijing, China"},
@@ -17,15 +17,18 @@
     "fAPAR",
     "optimal light use",
     "PL model",
+    "P model",
+    "eco-evolutionary optimality",
     "MODIS",
     "TRENDY",
     "flux tower",
     "phenology",
-    "carbon cycle"
+    "carbon cycle",
+    "gross primary production"
   ],
   "access_right": "open",
   "license": "MIT",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "language": "eng",
   "related_identifiers": [
     {"identifier": "https://github.com/zhu-ziqi/greenness", "relation": "isSupplementTo", "scheme": "url", "resource_type": "software"},
