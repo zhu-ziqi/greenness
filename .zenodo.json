@@ -5,12 +5,12 @@
   "description": "<p>This repository contains the MATLAB implementation of the PL model (potential production &times; light-use strategy), together with the analysis scripts, packaged gridded inputs and figure-generation code that reproduce all main and supplementary figures of the manuscript:</p><p>Zhu, Z., Wang, H., Zhou, B., Cai, W., Harrison, S. P., De Kauwe, M. G., &amp; Prentice, I. C. <em>Optimal canopy light-use strategy shapes global greenness dynamics</em>. Nature Communications (2026).</p><p>Contents:</p><ul><li><code>code/main_figures_ncomms.m</code> &mdash; master script that regenerates Figs. 1&ndash;6 and the supporting supplementary panels from the packaged inputs.</li><li><code>code/utility/</code> &mdash; plotting and statistical helpers (violin, scatter, lat-band, geoshow, etc.).</li><li><code>data/</code> &mdash; bundled GeoTIFF stacks (MODIS fAPAR, PL-model fAPAR, potential production A0, ROI mask, TRENDY-v9 ensemble summaries) and CSV/MAT metadata (FluxInformation.csv, gpp_global_pgc.mat, trendy_data_output*.mat).</li><li><code>figure/</code> &mdash; default export directory for the 600 dpi PNG outputs.</li></ul><p>The MATLAB Mapping Toolbox is required. The repository should be cited as:</p><p>Zhu, Z. et al. Code for &lsquo;Optimal canopy light-use strategy shapes global greenness dynamics&rsquo;, <em>greenness</em>, https://doi.org/10.5281/zenodo.XXXXXXX (2026).</p>",
   "creators": [
     {"name": "Zhu, Ziqi", "affiliation": "Department of Earth System Science, Tsinghua University, Beijing, China", "orcid": "0000-0003-0664-6032"},
-    {"name": "Wang, Han", "affiliation": "Department of Earth System Science, Tsinghua University, Beijing, China", "orcid": "0000-0001-8772-5864"},
+    {"name": "Wang, Han", "affiliation": "Department of Earth System Science, Tsinghua University, Beijing, China"},
     {"name": "Zhou, Boya", "affiliation": "Georgina Mace Centre for the Living Planet, Imperial College London, Ascot, UK"},
     {"name": "Cai, Wenjia", "affiliation": "Georgina Mace Centre for the Living Planet, Imperial College London, Ascot, UK"},
-    {"name": "Harrison, Sandy P.", "affiliation": "School of Archaeology, Geography and Environmental Science, University of Reading, Reading, UK", "orcid": "0000-0001-5687-1903"},
-    {"name": "De Kauwe, Martin G.", "affiliation": "School of Biological Sciences, University of Bristol, Bristol, UK", "orcid": "0000-0002-3399-9098"},
-    {"name": "Prentice, I. Colin", "affiliation": "Georgina Mace Centre for the Living Planet, Imperial College London, Ascot, UK", "orcid": "0000-0002-1296-6474"}
+    {"name": "Harrison, Sandy P.", "affiliation": "School of Archaeology, Geography and Environmental Science, University of Reading, Reading, UK"},
+    {"name": "De Kauwe, Martin G.", "affiliation": "School of Biological Sciences, University of Bristol, Bristol, UK"},
+    {"name": "Prentice, I. Colin", "affiliation": "Georgina Mace Centre for the Living Planet, Imperial College London, Ascot, UK"}
   ],
   "keywords": [
     "vegetation greenness",
