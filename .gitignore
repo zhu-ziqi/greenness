@@ -1,6 +1,7 @@
 # MATLAB editor autosave / backups
 *.asv
 *.m~*
+*.zip
 
 # OS junk
 .DS_Store
