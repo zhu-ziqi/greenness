@@ -64,40 +64,7 @@ greenness/
 └── README.md
 ```
 
-## Data Inventory
-
-
-| File                                 | Description                                                          | Used in                 |
-| ------------------------------------ | -------------------------------------------------------------------- | ----------------------- |
-| `FluxInformation.csv`                | Flux-tower metadata and biome classes for Figure 2 site diagnostics. | `main_figures_ncomms.m` |
-| `gpp_global_pgc.mat`                 | Annual global GPP totals for PL simulations.                         | `main_figures_ncomms.m` |
-| `trendy_data_output.mat`             | TRENDY ensemble seasonal diagnostics.                                | `main_figures_ncomms.m` |
-| `trendy_param_output.mat`            | TRENDY model performance summary metrics.                            | `main_figures_ncomms.m` |
-| `trendy_data_output_gpp.mat`         | TRENDY ensemble GPP diagnostics.                                     | `main_figures_ncomms.m` |
-| `trendy_param_output_gpp.mat`        | TRENDY ensemble GPP performance metrics.                             | `main_figures_ncomms.m` |
-| `fapar_global_modis_05d.tif`         | MODIS fAPAR climatology (0.5°).                                      | `main_figures_ncomms.m` |
-| `fapar_global_plmodel_05d.tif`       | PL-model simulated fAPAR climatology (0.5°).                         | `main_figures_ncomms.m` |
-| `a0_global_plmodel_05d.tif`          | Potential production A₀ driving the PL model (0.5°).                 | `main_figures_ncomms.m` |
-| `roi_global_05d.tif`                 | Region-of-interest / land mask (0.5°).                               | `main_figures_ncomms.m` |
-| `fapar_trend_global_plmodel_05d.tif` | PL-simulated fAPAR trend field.                                      | `main_figures_ncomms.m` |
-| `fapar_trendy_plmodel_05d.tif`       | TRENDY-simulated fAPAR trend field.                                  | `main_figures_ncomms.m` |
-
-
 All packaged assets in `data/` are referenced by `code/main_figures_ncomms.m`; the GeoTIFF stacks and `roi_global_05d.tif` must remain alongside these files for the workflow to complete.
-
-## Source Data
-
-Tabular source data for the main figures are bundled in `source_data/` to support transparent reproducibility and reuse.
-
-| File | Description | Used in |
-| --- | --- | --- |
-| `Fig1_source_data.xlsx` | Latitudinal-band mean ± std of MODIS fAPAR and PL-model A₀ seasonality. | Fig. 1c |
-| `Fig1c_source_data.xlsx` | Latitudinal-band mean ± std of fAPAR / A₀ seasonality used by Fig. 1c (compact form). | Fig. 1c |
-| `Fig2_source_data.xlsx` | Pearson's r between observed monthly fAPAR and PL-model A₀ at 263 flux-tower sites, tagged by IGBP biome. | Fig. 2 |
-| `Fig2c_source_data.txt` | Tab-separated monthly fAPAR and PL-model A₀ for the 10 representative flux towers shown in Fig. 2c. | Fig. 2c |
-| `Fig3a_source_data.xlsx` | Pixel-level monthly PL-model fAPAR vs. MODIS fAPAR used in the density scatter. | Fig. 3a |
-| `Fig4d_source_data.xlsx` | Per-model R² and RMSE for the TRENDY-v9 ensemble and the PL model. | Fig. 4d |
-| `Fig6_source_data.xlsx` | Annual global GPP time series (TRENDY mean ± std, PL-model trend, A₀-only counterfactual). | Fig. 6 |
 
 ## System Requirements
 
@@ -165,7 +132,6 @@ If you use this code in a publication, please cite both the manuscript and the v
 Versioned software deposit:
 
 > Zhu, Z. et al. *Optimal canopy light-use strategy shapes global greenness
-> dynamics*, `greenness`, **[https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)** (2026).
 
 ## License
 
