@@ -1,6 +1,6 @@
 # Optimal canopy light-use strategy shapes global greenness dynamics
 
-[DOI](https://doi.org/10.5281/zenodo.XXXXXXX)
+[DOI](https://doi.org/10.5281/zenodo.21186441)
 [License: MIT](LICENSE)
 
 Figure 1
@@ -144,7 +144,7 @@ The script writes the following assets to `figure/`:
 
 ## Reproducibility
 
-The tag `v1.0.2` of this repository corresponds to the version archived on Zenodo as **[https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)** and contains the code, packaged inputs, and figure-generation scripts used to produce Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
+The tag `v1.0.2` of this repository corresponds to the version archived on Zenodo as **[https://doi.org/10.5281/zenodo.21186441](https://doi.org/10.5281/zenodo.21186441)** and contains the code, packaged inputs, and figure-generation scripts used to produce Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
 
 ```matlab
 % In MATLAB, with the Mapping Toolbox installed
