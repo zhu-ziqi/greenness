@@ -1,9 +1,9 @@
 # Optimal canopy light-use strategy shapes global greenness dynamics
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20998137-blue)](https://doi.org/10.5281/zenodo.20998137)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[DOI](https://doi.org/10.5281/zenodo.XXXXXXX)
+[License: MIT](LICENSE)
 
-![Figure 1](figure/Figure1_small.png)
+Figure 1
 
 > **Fig. 1 |** Seasonality of the fraction of absorbed photosynthetically active radiation (fAPAR, dimensionless) and potential primary production (A₀, g C m⁻² month⁻¹). **(a)** fAPAR seasonality (dimensionless) derived from the MODIS product. The seasonality metric used here represents seasonal concentration, ranging from zero (uniform throughout the year) to unity (a complete leaf growth cycle within a single month). **(b)** A₀ seasonality (dimensionless) derived from the P model. **(c)** Latitudinal variations in the seasonality of fAPAR and A₀, with values representing area-weighted averages in 1° latitudinal bands.
 
@@ -21,23 +21,9 @@ This repository accompanies the manuscript **"Optimal canopy light-use strategy 
 
 ---
 
-## Authors
+## Descriptions
 
-Ziqi Zhu (朱子琪)¹·², Han Wang (王焓)¹·*, Boya Zhou (周博雅)³, Wenjia Cai (蔡文佳)³, Sandy P. Harrison⁴·¹, Martin G. De Kauwe⁵, I. Colin Prentice³·¹
-
-¹ Department of Earth System Science, Ministry of Education Key Laboratory for Earth System Modelling, Institute for Global Change Studies, Tsinghua University, Beijing 100084, China
-² State Key Laboratory of Space Information System and Integrated Application, Beijing 100086, China
-³ Georgina Mace Centre for the Living Planet, Department of Life Sciences, Imperial College London, Silwood Park Campus, Buckhurst Road, Ascot SL5 7PY, United Kingdom
-⁴ School of Archaeology, Geography and Environmental Sciences (SAGES), University of Reading, Reading RG6 6AH, United Kingdom
-⁵ School of Biological Sciences, University of Bristol, Bristol, BS8 1TQ, United Kingdom
-
-\* Corresponding author: **Han Wang** — `wang_han@tsinghua.edu.cn`
-
----
-
-## Abstract
-
-"Greenness" is a key indicator of the functional state of vegetation. However, the physiological processes behind seasonal patterns in greenness are diverse and incompletely understood, hindering the predictability of climate-driven shifts in global foliage phenology. Optimality principles suggest that plants invest in canopy architecture to maximize light capture. Therefore, we hypothesize that, irrespective of specific physiological mechanisms, greenness (fAPAR: fractional canopy light absorption) commonly tracks the seasonal dynamics of potential production (A₀: theoretical canopy carbon uptake with all light absorbed). In other words, **plants tend to display foliage when it is most productive.** We show that observations confirm this hypothesis and develop a model predicting fAPAR from the seasonal cycle of A₀, with a phenological lag that increases (from 2 weeks to 3 months) with increasing moisture. This model **captures 81% of observed variations in fAPAR** and shows that light and environmentally regulated biophysical constraints shape global patterns of vegetation greenness, its seasonal cycle, and its recent increase.
+To understand the emergent seasonal pattern of vegetation greenness based on the concept of optimality, we hypothesized that the seasonal dynamics of canopy greenness tracks that of canopy potential production. Canopy greenness was indexed by fraction of absorbed photosynthetically active radiation (fAPAR). Canopy potential production was defined here as the rate of canopy photosynthesis that would be achieved if all light were absorbed by green tissues (A0), which was estimated from climate variables with a universal photosynthesis model, the P model. We tested our hypothesis at a global scale by comparing the spatial patterns of fAPAR seasonality and A0 seasonality, especially their corelation coefficient cross grid cells and along the latitudinal gradient. We also tested our hypothesis at flux sites cross various biomes with corelation coefficient of observed monthly fAPAR and the P model predicted monthly A0. With the extensive supports from satellite data and ground data, we further developed a universal model of canopy greenness (the PL model) in which the seasonal dynamics of fAPAR are predicted directly from the climate-driven seasonal cycle of A0. We evaluated our PL model by comparing the fAPAR predictions with the remote sensing data, and predictions from state-of-the-art process-based models in TRENDY projects. We also applied the PL model to predict historical trends in global fAPAR and GPP with a comparison with TRENDY models, and identify the primary drivers of global greening and browning trends with a factorial simulation.
 
 ---
 
@@ -46,8 +32,10 @@ Ziqi Zhu (朱子琪)¹·², Han Wang (王焓)¹·*, Boya Zhou (周博雅)³, Wen
 - [Highlights](#highlights)
 - [Authors](#authors)
 - [Abstract](#abstract)
+- [Descriptions](#descriptions)
 - [Repository Layout](#repository-layout)
 - [Data Inventory](#data-inventory)
+- [Source Data](#source-data)
 - [System Requirements](#system-requirements)
 - [Setup Guide](#setup-guide)
 - [Running the Workflow](#running-the-workflow)
@@ -63,10 +51,11 @@ Ziqi Zhu (朱子琪)¹·², Han Wang (王焓)¹·*, Boya Zhou (周博雅)³, Wen
 ```
 greenness/
 ├── code/                    # MATLAB scripts for the manuscript figures
-│   ├── main_figures_ncomms.m / .mlx
+│   ├── main_figures_ncomms.m
 │   ├── readme.txt
 │   └── utility/             # Plotting and statistical helpers
 ├── data/                    # Packaged inputs (rasters, tables, TRENDY diagnostics)
+├── source_data/             # Tabular source data behind the main figures
 ├── figure/                  # Default export directory
 │   ├── Figure1.png          # High-resolution (master copy)
 │   ├── Figure1_small.png    # Low-resolution copy used in this README
@@ -77,22 +66,38 @@ greenness/
 
 ## Data Inventory
 
-| File | Description | Used in |
-| --- | --- | --- |
-| `FluxInformation.csv` | Flux-tower metadata and biome classes for Figure 2 site diagnostics. | `main_figures_ncomms.m` |
-| `gpp_global_pgc.mat` | Annual global GPP totals for PL simulations. | `main_figures_ncomms.m` |
-| `trendy_data_output.mat` | TRENDY ensemble seasonal diagnostics. | `main_figures_ncomms.m` |
-| `trendy_param_output.mat` | TRENDY model performance summary metrics. | `main_figures_ncomms.m` |
-| `trendy_data_output_gpp.mat` | TRENDY ensemble GPP diagnostics. | `main_figures_ncomms.m` |
-| `trendy_param_output_gpp.mat` | TRENDY ensemble GPP performance metrics. | `main_figures_ncomms.m` |
-| `fapar_global_modis_05d.tif` | MODIS fAPAR climatology (0.5°). | `main_figures_ncomms.m` |
-| `fapar_global_plmodel_05d.tif` | PL-model simulated fAPAR climatology (0.5°). | `main_figures_ncomms.m` |
-| `a0_global_plmodel_05d.tif` | Potential production A₀ driving the PL model (0.5°). | `main_figures_ncomms.m` |
-| `roi_global_05d.tif` | Region-of-interest / land mask (0.5°). | `main_figures_ncomms.m` |
-| `fapar_trend_global_plmodel_05d.tif` | PL-simulated fAPAR trend field. | `main_figures_ncomms.m` |
-| `fapar_trendy_plmodel_05d.tif` | TRENDY-simulated fAPAR trend field. | `main_figures_ncomms.m` |
+
+| File                                 | Description                                                          | Used in                 |
+| ------------------------------------ | -------------------------------------------------------------------- | ----------------------- |
+| `FluxInformation.csv`                | Flux-tower metadata and biome classes for Figure 2 site diagnostics. | `main_figures_ncomms.m` |
+| `gpp_global_pgc.mat`                 | Annual global GPP totals for PL simulations.                         | `main_figures_ncomms.m` |
+| `trendy_data_output.mat`             | TRENDY ensemble seasonal diagnostics.                                | `main_figures_ncomms.m` |
+| `trendy_param_output.mat`            | TRENDY model performance summary metrics.                            | `main_figures_ncomms.m` |
+| `trendy_data_output_gpp.mat`         | TRENDY ensemble GPP diagnostics.                                     | `main_figures_ncomms.m` |
+| `trendy_param_output_gpp.mat`        | TRENDY ensemble GPP performance metrics.                             | `main_figures_ncomms.m` |
+| `fapar_global_modis_05d.tif`         | MODIS fAPAR climatology (0.5°).                                      | `main_figures_ncomms.m` |
+| `fapar_global_plmodel_05d.tif`       | PL-model simulated fAPAR climatology (0.5°).                         | `main_figures_ncomms.m` |
+| `a0_global_plmodel_05d.tif`          | Potential production A₀ driving the PL model (0.5°).                 | `main_figures_ncomms.m` |
+| `roi_global_05d.tif`                 | Region-of-interest / land mask (0.5°).                               | `main_figures_ncomms.m` |
+| `fapar_trend_global_plmodel_05d.tif` | PL-simulated fAPAR trend field.                                      | `main_figures_ncomms.m` |
+| `fapar_trendy_plmodel_05d.tif`       | TRENDY-simulated fAPAR trend field.                                  | `main_figures_ncomms.m` |
+
 
 All packaged assets in `data/` are referenced by `code/main_figures_ncomms.m`; the GeoTIFF stacks and `roi_global_05d.tif` must remain alongside these files for the workflow to complete.
+
+## Source Data
+
+Tabular source data for the main figures are bundled in `source_data/` to support transparent reproducibility and reuse.
+
+| File | Description | Used in |
+| --- | --- | --- |
+| `Fig1_source_data.xlsx` | Latitudinal-band mean ± std of MODIS fAPAR and PL-model A₀ seasonality. | Fig. 1c |
+| `Fig1c_source_data.xlsx` | Latitudinal-band mean ± std of fAPAR / A₀ seasonality used by Fig. 1c (compact form). | Fig. 1c |
+| `Fig2_source_data.xlsx` | Pearson's r between observed monthly fAPAR and PL-model A₀ at 263 flux-tower sites, tagged by IGBP biome. | Fig. 2 |
+| `Fig2c_source_data.txt` | Tab-separated monthly fAPAR and PL-model A₀ for the 10 representative flux towers shown in Fig. 2c. | Fig. 2c |
+| `Fig3a_source_data.xlsx` | Pixel-level monthly PL-model fAPAR vs. MODIS fAPAR used in the density scatter. | Fig. 3a |
+| `Fig4d_source_data.xlsx` | Per-model R² and RMSE for the TRENDY-v9 ensemble and the PL model. | Fig. 4d |
+| `Fig6_source_data.xlsx` | Annual global GPP time series (TRENDY mean ± std, PL-model trend, A₀-only counterfactual). | Fig. 6 |
 
 ## System Requirements
 
@@ -124,20 +129,22 @@ The script sequentially:
 
 The script writes the following assets to `figure/`:
 
-| File | Description |
-| --- | --- |
-| `Figure1.png` | Fig. 1 — fAPAR and A₀ seasonality maps with latitudinal comparison. |
-| `Seasonality_Pattern_A0.png` | Global MODIS vs. PL seasonality maps with latitude-band summary. |
-| `Figure2.png` / `FluxSynchrony_Map.png` / `FluxSynchrony_Box.png` | Fig. 2 — flux-tower fAPAR–A₀ synchrony diagnostics. |
-| `Figure3.png` / `spatial_compare.png` / `spatial_compare_density.png` | Fig. 3 — spatial comparison of PL and MODIS fAPAR. |
-| `Figure4.png` / `Seasonality_Pattern.png` / `Trendy_Performance.png` | Fig. 4 — PL vs. TRENDY seasonal-cycle comparison. |
-| `Figure5.png` / `fAPARtrend_pvalue.png` / `fAPARtrend_pvalue_nolabel.png` / `fAPARtrend_driver_attribution.png` | Fig. 5 — observed and modelled fAPAR trends and driver attribution. |
-| `Figure6.png` / `GPPtrend_series.png` | Fig. 6 — global GPP trajectories for TRENDY, PL, and the A₀-only experiment. |
-| `FigS_Trend_Scenariosctrl.png` | Supplementary trend-scenario control panel. |
+
+| File                                                                                                            | Description                                                                  |
+| --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `Figure1.png`                                                                                                   | Fig. 1 — fAPAR and A₀ seasonality maps with latitudinal comparison.          |
+| `Seasonality_Pattern_A0.png`                                                                                    | Global MODIS vs. PL seasonality maps with latitude-band summary.             |
+| `Figure2.png` / `FluxSynchrony_Map.png` / `FluxSynchrony_Box.png`                                               | Fig. 2 — flux-tower fAPAR–A₀ synchrony diagnostics.                          |
+| `Figure3.png` / `spatial_compare.png` / `spatial_compare_density.png`                                           | Fig. 3 — spatial comparison of PL and MODIS fAPAR.                           |
+| `Figure4.png` / `Seasonality_Pattern.png` / `Trendy_Performance.png`                                            | Fig. 4 — PL vs. TRENDY seasonal-cycle comparison.                            |
+| `Figure5.png` / `fAPARtrend_pvalue.png` / `fAPARtrend_pvalue_nolabel.png` / `fAPARtrend_driver_attribution.png` | Fig. 5 — observed and modelled fAPAR trends and driver attribution.          |
+| `Figure6.png` / `GPPtrend_series.png`                                                                           | Fig. 6 — global GPP trajectories for TRENDY, PL, and the A₀-only experiment. |
+| `FigS_Trend_Scenariosctrl.png`                                                                                  | Supplementary trend-scenario control panel.                                  |
+
 
 ## Reproducibility
 
-The tag `v1.0.1` of this repository corresponds to the version archived on Zenodo as **https://doi.org/10.5281/zenodo.20998575** and contains the code, packaged inputs, and figure-generation scripts used to produce Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
+The tag `v1.0.2` of this repository corresponds to the version archived on Zenodo as **[https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)** and contains the code, packaged inputs, and figure-generation scripts used to produce Figs. 1–6 and Supplementary Figs. S1–S34 of the manuscript. To reproduce the figures:
 
 ```matlab
 % In MATLAB, with the Mapping Toolbox installed
@@ -158,7 +165,7 @@ If you use this code in a publication, please cite both the manuscript and the v
 Versioned software deposit:
 
 > Zhu, Z. et al. *Optimal canopy light-use strategy shapes global greenness
-> dynamics*, `greenness`, **https://doi.org/10.5281/zenodo.20998575** (2026).
+> dynamics*, `greenness`, **[https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)** (2026).
 
 ## License
 
