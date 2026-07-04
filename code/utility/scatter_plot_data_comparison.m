@@ -1,4 +1,4 @@
-function mdl = scatter_plot_data_comparison(X, Y, Options)
+function [mdl,X,Y] = scatter_plot_data_comparison(X, Y, Options)
 % SCATTER_PLOT_DATA_COMPARISON: Plot data comparison
 %
 %   SCATTER_PLOT_DATA_COMPARISON(X,Y) creates a scatterplot of X and Y at
