@@ -11,6 +11,20 @@ This repository accompanies the manuscript **"Optimal canopy light-use strategy 
 
 ---
 
+## Authors
+
+Ziqi Zhu (朱子琪)¹·², Han Wang (王焓)¹·*, Boya Zhou (周博雅)³, Wenjia Cai (蔡文佳)³, Sandy P. Harrison⁴·¹, Martin G. De Kauwe⁵, I. Colin Prentice³·¹
+
+¹ Department of Earth System Science, Ministry of Education Key Laboratory for Earth System Modelling, Institute for Global Change Studies, Tsinghua University, Beijing 100084, China
+² State Key Laboratory of Space Information System and Integrated Application, Beijing 100086, China
+³ Georgina Mace Centre for the Living Planet, Department of Life Sciences, Imperial College London, Silwood Park Campus, Buckhurst Road, Ascot SL5 7PY, United Kingdom
+⁴ School of Archaeology, Geography and Environmental Sciences (SAGES), University of Reading, Reading RG6 6AH, United Kingdom
+⁵ School of Biological Sciences, University of Bristol, Bristol, BS8 1TQ, United Kingdom
+
+\* Corresponding author: **Han Wang** — `wang_han@tsinghua.edu.cn`
+
+---
+
 ## Highlights
 
 - **A general synchronisation hypothesis** for vegetation greenness: fAPAR (fraction of absorbed photosynthetically active radiation) tracks the seasonal dynamics of potential production **A₀** across biomes — *plants tend to display foliage when it is most productive.*
@@ -31,11 +45,8 @@ To understand the emergent seasonal pattern of vegetation greenness based on the
 
 - [Highlights](#highlights)
 - [Authors](#authors)
-- [Abstract](#abstract)
 - [Descriptions](#descriptions)
 - [Repository Layout](#repository-layout)
-- [Data Inventory](#data-inventory)
-- [Source Data](#source-data)
 - [System Requirements](#system-requirements)
 - [Setup Guide](#setup-guide)
 - [Running the Workflow](#running-the-workflow)
@@ -132,6 +143,7 @@ If you use this code in a publication, please cite both the manuscript and the v
 Versioned software deposit:
 
 > Zhu, Z. et al. *Optimal canopy light-use strategy shapes global greenness
+> dynamics*, `greenness`, **[https://doi.org/10.5281/zenodo.21186441](https://doi.org/10.5281/zenodo.21186441)** (2026).
 
 ## License
 
