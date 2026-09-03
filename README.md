@@ -7,7 +7,7 @@ Figure 1
 
 > **Fig. 1 |** Seasonality of the fraction of absorbed photosynthetically active radiation (fAPAR, dimensionless) and potential primary production (A₀, g C m⁻² month⁻¹). **(a)** fAPAR seasonality (dimensionless) derived from the MODIS product. The seasonality metric used here represents seasonal concentration, ranging from zero (uniform throughout the year) to unity (a complete leaf growth cycle within a single month). **(b)** A₀ seasonality (dimensionless) derived from the P model. **(c)** Latitudinal variations in the seasonality of fAPAR and A₀, with values representing area-weighted averages in 1° latitudinal bands.
 
-This repository accompanies the manuscript **"Optimal canopy light-use strategy shapes global greenness dynamics"** (Zhu et al., *Nature Communications*, 2026; manuscript **NCOMMS-25-24941B**) and provides the code, data, and figures needed to reproduce the main and supplementary results.
+This repository accompanies the manuscript **"Optimal canopy light-use strategy shapes global greenness dynamics"** (Zhu et al., *Nature Communications*, 2026).
 
 ---
 
